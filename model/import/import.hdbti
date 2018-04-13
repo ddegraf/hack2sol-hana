@@ -1,0 +1,22 @@
+import = [{
+    table = "com.sap.hack2sol.master.model::data.SalesOrder"; 
+    schema = "HACK2SOL_MASTER"; 
+    file = "com.sap.hack2sol.master.model.import:SalesOrder.csv";
+    header = false;
+    delimField = ";"; 
+    delimEnclosing = "\"";
+},{
+    table = "com.sap.hack2sol.master.model::data.SalesOrderPosition"; 
+    schema = "HACK2SOL_MASTER"; 
+    file = "com.sap.hack2sol.master.model.import:SalesOrderPosition.csv";
+    header = false;
+    delimField = ";"; 
+    delimEnclosing = "\"";
+},{
+    table = "com.sap.hack2sol.master.model::data.Material"; 
+    schema = "HACK2SOL_MASTER"; 
+    file = "com.sap.hack2sol.master.model.import:Material.csv";
+    header = false;
+    delimField = ";"; 
+    delimEnclosing = "\"";
+}]; 

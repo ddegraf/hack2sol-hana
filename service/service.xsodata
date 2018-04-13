@@ -1,0 +1,15 @@
+service  { 
+    "com.sap.hack2sol.master.model::data.SalesOrder" as "SalesOrders"
+  	navigates ("SalesOrders_SalesOrderPositions" as "Positions");
+	
+	"com.sap.hack2sol.master.model::data.SalesOrderPosition" as "SalesOrderPositions"
+	navigates ("SalesOrderPositions_Material" as "Material");
+	
+	"com.sap.hack2sol.master.model::data.Material" as "Material"; 
+    
+    association "SalesOrders_SalesOrderPositions" principal "SalesOrders"("salesOrderId") multiplicity "1"
+    dependent "SalesOrderPositions"("salesOrderId") multiplicity "*";
+    
+    association "SalesOrderPositions_Material" principal "SalesOrderPositions"("materialId") multiplicity "1"
+    dependent "Material"("materialId") multiplicity "1";
+}  

@@ -1,0 +1,21 @@
+namespace com.sap.hack2sol.master.model;
+@Schema: 'HACK2SOL_MASTER' 
+context data {
+   Entity SalesOrder{
+       key salesOrderId: Integer;
+       creator: String(255);
+   }; 
+   
+   Entity SalesOrderPosition{
+       key salesOrderId: Integer;
+       key position: Integer;
+       materialId: Integer;
+       amount: Integer;
+   };
+   
+   Entity Material {
+       key materialId: Integer;
+       name: String(255);
+       unit: String(25);
+   };
+};
